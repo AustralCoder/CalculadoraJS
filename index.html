@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<!-- fuentes de google -->
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+    </style>
+</head>
+<body>
+
+<!-- navbar -->
+
+<nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="#">Calculadora UTN</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExample02">
+        <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="https://github.com/AustralCoder/calculadora/blob/main/READ%20ME.txt">Team members</a>
+        </li>
+        </ul>
+        <form role="search">
+        <input class="form-control" type="search" placeholder="nada que buscar jaja" aria-label="Search">
+        </form>
+    </div>
+    </div>
+</nav>
+
+
+
+
+
+
+
+
+    <!-- inicio calculadora -->
+    <div id="calc">
+        <!-- el choclo es por el icono de bootstrap jajaja -->
+        <div class ="title"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calculator" viewBox="0 0 16 16">
+            <path d="M12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h8zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z"/>
+            <path d="M4 2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-2zm0 4a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-4z"/>
+        </svg>calculadora
+    </div>
+
+    <div>
+        
+        <input type="text" class="pantalla"  id="calcu" readonly/>
+        <br>
+        <!-- BOTONES -->
+        <div class="teclas">
+
+            <button type="button" class="btn btn-success" value="1" onclick="dis('1')"/>1</button>
+            <button type="button" class="btn btn-success" type="button" value="2" onclick="dis('2')"/> 2 </button>
+            <button type="button"class="btn btn-success" type="button" value="3" onclick="dis('3')"/> 3 </button>
+            <button type="button"  class="operator btn btn-info" type="button" value="+" onclick="dis('+')"/> + </button>
+        
+        
+            <button type="button" class="btn btn-success" type="button" value="4" onclick="dis('4')"/> 4 </button>
+            <button type="button" class="btn btn-success" type="button" value="5" onclick="dis('5')"/> 5 </button>
+            <button type="button" class="btn btn-success" type="button" value="6" onclick="dis('6')"/> 6 </button>
+            <button type="button" class="operator btn btn-info" type="button" value="-" onclick="dis('-')"/> - </button>
+        
+
+        
+            <button type="button" class="btn btn-success" type="button" value="7" onclick="dis('7')"/> 7 </button>
+            <button type="button" class="btn btn-success" type="button" value="8" onclick="dis('8')"/> 8 </button>
+            <button type="button" class="btn btn-success" type="button" value="9" onclick="dis('9')"/> 9 </button>
+            <button type="button"class="operator btn btn-info" type="button" value="*" onclick="dis('*')"/> * </button>
+            
+
+            <button type="button" class="btn btn-success" type="button" value="." onclick="dis('.')"/> . </button>
+            <button type="button" class="btn btn-success" type="button" value="0" onclick="dis('0')"/> 0 </button>
+            <button type="button" class="operator btn btn-info" type="button" value="=" onclick="solve()"/> = </button>
+            <button type="button"class="operator btn btn-info" type="button" value="/" onclick="dis('/')"/> / </button>
+        </div>   
+        <button id="borrar" type="button" class="btn btn-primary" type="button" type="button" value="c" onclick="clr()"/> C </button>
+    </div>
+</div> 
+
+    <br>
+    <!-- fin calculadora -->
+
+<!-- footer -->
+<div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+        </a>
+        <span class="footer" class="mb-3 mb-md-0 text-muted">Desarrollo de calculadora en Javascript usando Bootstrap</span>
+        <div class="class="nav col-md-4 justify-content-end list-unstyled d-flex"> <a href="https://github.com/AustralCoder/calculadora.git"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="56" fill="black" class="bi bi-github" viewBox="0 0 16 16">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+            </svg>
+            </a>
+        </div>
+    </div>
+    </ul>
+    </footer>
+</div>
+
+
+    <script src="./js/calc.js"></script>
+</body>
+</html>
