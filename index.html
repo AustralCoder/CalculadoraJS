@@ -17,6 +17,7 @@
 
 <!-- navbar -->
 
+
 <nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
     <div class="container-fluid">
     <a class="navbar-brand" href="#">Calculadora UTN</a>
@@ -28,6 +29,9 @@
         <ul class="navbar-nav me-auto">
         <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/Funcionalidad.html">Test de funcionalidad</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="https://github.com/AustralCoder/CalculadoraJS/blob/master/README.md">Team members</a>
@@ -61,31 +65,31 @@
         <!-- BOTONES -->
         <div class="teclas">
 
-            <button type="button" class="btn btn-success" value="1" onclick="dis('1')"/>1</button>
-            <button type="button" class="btn btn-success" type="button" value="2" onclick="dis('2')"/> 2 </button>
-            <button type="button"class="btn btn-success" type="button" value="3" onclick="dis('3')"/> 3 </button>
-            <button type="button"  class="operator btn btn-info" type="button" value="+" onclick="dis('+')"/> + </button>
+            <button type="button" class="btn btn-success" value="1" onclick="appendNumber('1')"/>1</button>
+            <button type="button" class="btn btn-success" type="button" value="2" onclick="appendNumber('2')"/> 2 </button>
+            <button type="button"class="btn btn-success" type="button" value="3" onclick="appendNumber('3')"/> 3 </button>
+            <button type="button"  class="operator btn btn-info" type="button" value="+" onclick="appendNumber('+')"/> + </button>
         
         
-            <button type="button" class="btn btn-success" type="button" value="4" onclick="dis('4')"/> 4 </button>
-            <button type="button" class="btn btn-success" type="button" value="5" onclick="dis('5')"/> 5 </button>
-            <button type="button" class="btn btn-success" type="button" value="6" onclick="dis('6')"/> 6 </button>
-            <button type="button" class="operator btn btn-info" type="button" value="-" onclick="dis('-')"/> - </button>
+            <button type="button" class="btn btn-success" type="button" value="4" onclick="appendNumber('4')"/> 4 </button>
+            <button type="button" class="btn btn-success" type="button" value="5" onclick="appendNumber('5')"/> 5 </button>
+            <button type="button" class="btn btn-success" type="button" value="6" onclick="appendNumber('6')"/> 6 </button>
+            <button type="button" class="operator btn btn-info" type="button" value="-" onclick="appendNumber('-')"/> - </button>
         
 
         
-            <button type="button" class="btn btn-success" type="button" value="7" onclick="dis('7')"/> 7 </button>
-            <button type="button" class="btn btn-success" type="button" value="8" onclick="dis('8')"/> 8 </button>
-            <button type="button" class="btn btn-success" type="button" value="9" onclick="dis('9')"/> 9 </button>
-            <button type="button"class="operator btn btn-info" type="button" value="*" onclick="dis('*')"/> * </button>
+            <button type="button" class="btn btn-success" type="button" value="7" onclick="appendNumber('7')"/> 7 </button>
+            <button type="button" class="btn btn-success" type="button" value="8" onclick="appendNumber('8')"/> 8 </button>
+            <button type="button" class="btn btn-success" type="button" value="9" onclick="appendNumber('9')"/> 9 </button>
+            <button type="button"class="operator btn btn-info" type="button" value="*" onclick="appendNumber('*')"/> * </button>
             
 
-            <button type="button" class="btn btn-success" type="button" value="." onclick="dis('.')"/> . </button>
-            <button type="button" class="btn btn-success" type="button" value="0" onclick="dis('0')"/> 0 </button>
-            <button type="button" class="operator btn btn-info" type="button" value="=" onclick="solve()"/> = </button>
-            <button type="button"class="operator btn btn-info" type="button" value="/" onclick="dis('/')"/> / </button>
+            <button type="button" class="btn btn-success" type="button" value="." onclick="appendNumber('.')"/> . </button>
+            <button type="button" class="btn btn-success" type="button" value="0" onclick="appendNumber('0')"/> 0 </button>
+            <button type="button" class="operator btn btn-info" type="button" value="=" onclick="solveOperation()"/> = </button>
+            <button type="button"class="operator btn btn-info" type="button" value="/" onclick="appendNumber('/')"/> / </button>
         </div>   
-        <button id="borrar" type="button" class="btn btn-primary" type="button" type="button" value="c" onclick="clr()"/> C </button>
+        <button id="borrar" type="button" class="btn btn-primary" type="button" type="button" value="c" onclick="clearScreen()"/> C </button>
     </div>
 </div> 
 
